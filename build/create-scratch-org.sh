@@ -1,7 +1,8 @@
 # Get the private key from the environment variable
 echo "Setting up DevHub Connection..."
 mkdir keys
-echo "KEY" $SFDC_SERVER_KEY | base64 -di > keys/server.key
+echo $SFDC_SERVER_KEY
+echo $SFDC_SERVER_KEY | base64 -di > keys/server.key
 
 # Authenticate to salesforce
 echo "Authenticating..."
